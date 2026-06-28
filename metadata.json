@@ -1,0 +1,6 @@
+{
+  "name": "ريبلا كيدز",
+  "description": "نظام محاسبي متكامل مصمم خصيصاً لإدارة مبيعات ومستودعات بيجامات الأطفال بالجملة في سوريا B2B، يتميز بمزامنة ذكية وتحليلات متقدمة مدعومة بالذكاء الاصطناعي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

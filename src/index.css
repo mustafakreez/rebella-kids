@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-primary-50: rgba(16, 185, 129, 0.12);
+  --color-primary-100: rgba(16, 185, 129, 0.2);
+  --color-primary-600: #10b981;
+  --color-primary-700: #059669;
+}
+
+/* Custom global dark theme rules */
+body, html {
+  background-color: #0b111e !important;
+  color: #f3f4f6 !important;
+  font-family: "Cairo", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure deep midnight background across layout */
+.bg-slate-50 {
+  background-color: #0b111e !important;
+}
+
+/* Sidebar, main cards, forms and panels */
+.bg-white, aside, header.bg-white, .bg-white.border-b {
+  background-color: #111827 !important;
+}
+
+.bg-white {
+  background-color: #111827 !important;
+}
+
+/* Cards and lists border adjustments */
+.border-slate-100, .border-slate-150, .border-slate-200, .border-slate-300 {
+  border-color: #1f2937 !important;
+}
+
+/* Font colors adjusted for premium legibility and high contrast */
+.text-slate-950, .text-slate-900, .text-slate-800 {
+  color: #f9fafb !important;
+}
+
+.text-slate-700, .text-slate-650, .text-slate-600 {
+  color: #e5e7eb !important;
+}
+
+.text-slate-500, .text-slate-400 {
+  color: #9ca3af !important;
+}
+
+/* Input fields, selects, and text-fields on dark mode */
+input, select, textarea {
+  background-color: #172237 !important;
+  color: #f9fafb !important;
+  border-color: #374151 !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #10b981 !important;
+  background-color: #1e293b !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+option {
+  background-color: #111827 !important;
+  color: #f9fafb !important;
+}
+
+/* Tables in CRM/ERP updated for clean grid lines and highlighted headers */
+table {
+  background-color: #111827 !important;
+}
+
+thead, tr.bg-slate-50 {
+  background-color: #1f2937 !important;
+}
+
+tr:hover {
+  background-color: #172237 !important;
+}
+
+th {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+  border-bottom: 2px solid #374151 !important;
+}
+
+td {
+  border-bottom: 1px solid #1f2937 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Buttons active status hover support */
+.hover\:bg-slate-50:hover {
+  background-color: #1f2937 !important;
+}
+
+.hover\:bg-slate-100:hover {
+  background-color: #1f2937 !important;
+}
+
+.bg-slate-100 {
+  background-color: #1f2937 !important;
+}
+
+.bg-slate-200 {
+  background-color: #374151 !important;
+}
+
+/* Emerald Accent boxes (Successful alerts, payments, active buttons) */
+.bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+
+.text-emerald-700, .text-emerald-600 {
+  color: #34d399 !important;
+}
+
+.border-emerald-100 {
+  border-color: rgba(16, 185, 129, 0.2) !important;
+}
+
+/* Rose Accent boxes (Expenses, alert icons, delete fields) */
+.bg-rose-50 {
+  background-color: rgba(239, 68, 68, 0.12) !important;
+}
+
+.text-rose-700, .text-rose-600 {
+  color: #f87171 !important;
+}
+
+.border-rose-100 {
+  border-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+/* Indigo Accent boxes (Sales visualizer metrics, lines) */
+.bg-indigo-50 {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+}
+
+.text-indigo-700, .text-indigo-600 {
+  color: #818cf8 !important;
+}
+
+/* Orange Accent boxes (Warehouse alerts, warnings) */
+.bg-orange-50 {
+  background-color: rgba(249, 115, 22, 0.12) !important;
+}
+
+.text-orange-900, .text-orange-850, .text-orange-700, .text-orange-600 {
+  color: #fb923c !important;
+}
+
+.border-orange-100 {
+  border-color: rgba(249, 115, 22, 0.2) !important;
+}
+
+/* Custom print layouts for Syrian Invoice */
+@media print {
+  body, html {
+    background-color: white !important;
+    color: black !important;
+  }
+  .bg-white, .bg-slate-50, aside, header, table, tr, td, th {
+    background-color: white !important;
+    color: black !important;
+    border-color: #94a3b8 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-shadow-none {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
+
+/* Scrollbar styles for modern touch screens */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b111e;
+}
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 9px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+/* Recharts customized colors in dark mode */
+.recharts-cartesian-grid line {
+  stroke: #1f2937 !important;
+}
+.recharts-text tspan, .recharts-text {
+  fill: #9ca3af !important;
+}
+.recharts-legend-item-text {
+  color: #e5e7eb !important;
+}
+.recharts-default-tooltip {
+  background-color: #111827 !important;
+  border: 1px solid #374151 !important;
+  color: #f3f4f6 !important;
+}
+
